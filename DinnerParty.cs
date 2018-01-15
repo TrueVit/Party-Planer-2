@@ -57,7 +57,6 @@ namespace Party_Planer_2
                 CostOfDecorations = NumberOfPeople * CostOfUsualDecorations;
                 CostOfDecorations += UsusaDecorationFee;
             }
-            System.Console.WriteLine("CostOfDecorations={0}", CostOfDecorations);
             return CostOfDecorations;
         }
 
@@ -68,7 +67,6 @@ namespace Party_Planer_2
                 CostOfDrinks = NumberOfPeople * CostOfNonAlcoholicDrink;
             else
                 CostOfDrinks = NumberOfPeople * CostOfAlcoholicDrink;
-            System.Console.WriteLine("CostOfDdrinks={0}", CostOfDrinks);
             return CostOfDrinks;
         }
     }

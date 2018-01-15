@@ -13,20 +13,31 @@ namespace Party_Planer_2
     public partial class Form1 : Form
     {
         DinnerParty dinnerParty;
+        BirthdayParty birthdayParty;
 
         public Form1()
         {
             InitializeComponent();
+
             dinnerParty = new DinnerParty((int)numberOfPeopleNumericUpDown.Value, 
                 fancyDecorationsDinnerChekbox.Checked, 
                 healthyOptionCheckbox.Checked);
             DisplayCostOfDinnerParty();
-            tooLongLabel.Visible = false;
+
+            birthdayParty = new BirthdayParty((int)numberOfPeopleOnBirthday.Value,
+                fancyDecorationBirthdayChekbox.Checked, cakeWritingTextBox.Text);
+            DisplayCostOfBirthdayParty();
         }
 
         private void DisplayCostOfDinnerParty()
         {
-            costLabel.Text = dinnerParty.Cost.ToString("c");
+            costDinnerPartyLabel.Text = dinnerParty.Cost.ToString("c");
+        }
+
+        private void DisplayCostOfBirthdayParty()
+        {
+            costBirthdayPartyLabel.Text = birthdayParty.Cost.ToString("c");
+            tooLongLabel.Visible = birthdayParty.TooLong;
         }
 
         private void numberOfPeopleNumericUpDown_ValueChanged(object sender, EventArgs e)
@@ -49,10 +60,20 @@ namespace Party_Planer_2
 
         private void cakeWritingTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (cakeWritingTextBox.Text.Length > 10)
-                tooLongLabel.Visible = true;
-            else
-                tooLongLabel.Visible = false;
+            birthdayParty.CakeWritting = cakeWritingTextBox.Text;
+            DisplayCostOfBirthdayParty();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            birthdayParty.NumberOfPeople = (int)numberOfPeopleOnBirthday.Value;
+            DisplayCostOfBirthdayParty();
+        }
+
+        private void fancyDecorationBirthday_CheckedChanged(object sender, EventArgs e)
+        {
+            birthdayParty.FancyDecorations = fancyDecorationBirthdayChekbox.Checked;
+            DisplayCostOfBirthdayParty();
         }
     }
 }
