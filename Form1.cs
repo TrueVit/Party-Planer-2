@@ -21,6 +21,7 @@ namespace Party_Planer_2
                 fancyDecorationsDinnerChekbox.Checked, 
                 healthyOptionCheckbox.Checked);
             DisplayCostOfDinnerParty();
+            tooLongLabel.Visible = false;
         }
 
         private void DisplayCostOfDinnerParty()
@@ -44,6 +45,14 @@ namespace Party_Planer_2
         {
             dinnerParty.HealthyOption = healthyOptionCheckbox.Checked;
             DisplayCostOfDinnerParty();
+        }
+
+        private void cakeWritingTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (cakeWritingTextBox.Text.Length > 10)
+                tooLongLabel.Visible = true;
+            else
+                tooLongLabel.Visible = false;
         }
     }
 }
