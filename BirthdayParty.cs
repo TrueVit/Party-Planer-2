@@ -58,12 +58,12 @@ namespace Party_Planer_2
             }
         }
 
-        public decimal Cost
+        public override decimal Cost
         {
             get
             {
                 decimal totalCost;
-                totalCost = NumberOfPeople * CostOfFoodPerPerson;
+                totalCost = base.Cost;
                 totalCost += CalculateCostOfCake();
                 totalCost += CalculateCostOfDecorations();
                 return totalCost;

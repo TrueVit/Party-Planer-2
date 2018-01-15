@@ -22,12 +22,12 @@ namespace Party_Planer_2
             HealthyOption = healthyOption;
 
         }
-        public decimal Cost
+        public override decimal Cost
         {
             get
             {
                 decimal totalCost;
-                totalCost = NumberOfPeople * CostOfFoodPerPerson;
+                totalCost = base.Cost;
                 totalCost += CalculateCostOfDrinks();
                 if (HealthyOption)
                     totalCost *= (1 - DiscountOfHealthyOption);

@@ -17,7 +17,15 @@ namespace Party_Planer_2
         public int NumberOfPeople;
         public bool FancyDecorations;
 
-        //public decimal Cost;
+        public virtual decimal Cost
+        {
+            get
+            {
+                decimal totalCost;
+                totalCost = NumberOfPeople * CostOfFoodPerPerson;
+                return totalCost;
+            }
+        }
 
         protected virtual decimal CalculateCostOfDecorations()
         {
