@@ -1,0 +1,9 @@
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\bin\Debug\Party Planer 2.exe.config
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\bin\Debug\Party Planer 2.exe
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\bin\Debug\Party Planer 2.pdb
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\obj\Debug\Party Planer 2.csprojResolveAssemblyReference.cache
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\obj\Debug\Party_Planer_2.Form1.resources
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\obj\Debug\Party_Planer_2.Properties.Resources.resources
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\obj\Debug\Party Planer 2.csproj.GenerateResource.Cache
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\obj\Debug\Party Planer 2.exe
+C:\Users\ulchenkovvg\Documents\GitHub\Party Planer 2\Party Planer 2\obj\Debug\Party Planer 2.pdb
