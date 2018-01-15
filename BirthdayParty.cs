@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Party_Planer_2
 {
-    class BirthdayParty
+    class BirthdayParty:Party
     {
-        const decimal CostOfFoodPerPerson = 25M;
-        const decimal CostOfUsualDecorations = 7.5M;
-        const decimal UsusaDecorationFee = 30M;
-        const decimal CostOfFancyDecorations = 15;
-        const decimal FancyDecorationsFee = 50M;
-
         const int numberOfPeopleToLittleCacke = 4;
         const int maxLettersOnLiitleCake = 16;
         const decimal costOfLittleCacke = 40M;
@@ -21,9 +15,7 @@ namespace Party_Planer_2
         const decimal costOfBigCake = 75M;
         const decimal costOfLetter = 0.25M;
 
-        public int NumberOfPeople;
-        public bool FancyDecorations;
-        public string CakeWritting;
+       public string CakeWritting;
 
         public BirthdayParty(int numberOfPeople, bool fancyDecorations,
             string cakeWritting)
@@ -77,24 +69,7 @@ namespace Party_Planer_2
                 return totalCost;
             }
         }
-
-
-        private decimal CalculateCostOfDecorations()
-        {
-            decimal CostOfDecorations;
-            if (FancyDecorations)
-            {
-                CostOfDecorations = NumberOfPeople * CostOfFancyDecorations;
-                CostOfDecorations += FancyDecorationsFee;
-            }
-            else
-            {
-                CostOfDecorations = NumberOfPeople * CostOfUsualDecorations;
-                CostOfDecorations += UsusaDecorationFee;
-            }
-            return CostOfDecorations;
-        }
-
+        
         private decimal CalculateCostOfCake()
         {
             decimal costOfCacke;

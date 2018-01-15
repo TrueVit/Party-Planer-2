@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace Party_Planer_2
 {
-    class DinnerParty
+    class DinnerParty : Party 
     {
-        private const decimal CostOfFoodPerPerson = 25M;
         private const decimal CostOfAlcoholicDrink = 20M;
         private const decimal CostOfNonAlcoholicDrink = 5M;
         private const decimal DiscountOfHealthyOption = 0.05M;
-        private const decimal CostOfUsualDecorations = 7.5M;
-        private const decimal UsusaDecorationFee = 30M;
-        private const decimal CostOfFancyDecorations = 15;
-        private const decimal FancyDecorationsFee = 50M;
+
+        public bool HealthyOption;
 
         public DinnerParty (int numberOfPeople, bool fancyDecorations, 
             bool healthyOption)
@@ -25,11 +22,6 @@ namespace Party_Planer_2
             HealthyOption = healthyOption;
 
         }
-
-        public int NumberOfPeople;
-        public bool FancyDecorations;
-        public bool HealthyOption;
-
         public decimal Cost
         {
             get
@@ -44,22 +36,6 @@ namespace Party_Planer_2
             }
         }
 
-        private decimal CalculateCostOfDecorations()
-        {
-            decimal CostOfDecorations;
-            if (FancyDecorations)
-            {
-                CostOfDecorations = NumberOfPeople * CostOfFancyDecorations;
-                CostOfDecorations += FancyDecorationsFee;
-            }
-            else
-            {
-                CostOfDecorations = NumberOfPeople * CostOfUsualDecorations;
-                CostOfDecorations += UsusaDecorationFee;
-            }
-            return CostOfDecorations;
-        }
-
         private decimal CalculateCostOfDrinks()
         {
             decimal CostOfDrinks;
@@ -69,5 +45,9 @@ namespace Party_Planer_2
                 CostOfDrinks = NumberOfPeople * CostOfAlcoholicDrink;
             return CostOfDrinks;
         }
+        /*protected override decimal CalculateCostOfDecorations()
+        {
+            return 25M;
+        }*/
     }
 }
