@@ -18,10 +18,8 @@ namespace Party_Planer_2
        public string CakeWritting;
 
         public BirthdayParty(int numberOfPeople, bool fancyDecorations,
-            string cakeWritting)
+            string cakeWritting) : base(numberOfPeople, fancyDecorations) 
         {
-            NumberOfPeople = numberOfPeople;
-            FancyDecorations = fancyDecorations;
             CakeWritting = cakeWritting;
         }
 
@@ -62,8 +60,7 @@ namespace Party_Planer_2
         {
             get
             {
-                decimal totalCost;
-                totalCost = base.Cost;
+                decimal totalCost = base.Cost;
                 totalCost += CalculateCostOfCake();
                 totalCost += CalculateCostOfDecorations();
                 return totalCost;

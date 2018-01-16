@@ -15,19 +15,16 @@ namespace Party_Planer_2
         public bool HealthyOption;
 
         public DinnerParty (int numberOfPeople, bool fancyDecorations, 
-            bool healthyOption)
+            bool healthyOption) : base(numberOfPeople, fancyDecorations)
         {
-            NumberOfPeople = numberOfPeople;
-            FancyDecorations = fancyDecorations;
             HealthyOption = healthyOption;
-
         }
+
         public override decimal Cost
         {
             get
             {
-                decimal totalCost;
-                totalCost = base.Cost;
+                decimal totalCost = base.Cost;
                 totalCost += CalculateCostOfDrinks();
                 if (HealthyOption)
                     totalCost *= (1 - DiscountOfHealthyOption);

@@ -17,6 +17,12 @@ namespace Party_Planer_2
         public int NumberOfPeople;
         public bool FancyDecorations;
 
+        public Party(int numberOfPeople, bool fancyDecoration)
+        {
+            NumberOfPeople = numberOfPeople;
+            FancyDecorations = fancyDecoration;
+        }
+
         public virtual decimal Cost
         {
             get
