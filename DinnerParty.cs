@@ -45,9 +45,5 @@ namespace Party_Planer_2
                 CostOfDrinks = NumberOfPeople * CostOfAlcoholicDrink;
             return CostOfDrinks;
         }
-        /*protected override decimal CalculateCostOfDecorations()
-        {
-            return 25M;
-        }*/
     }
 }
